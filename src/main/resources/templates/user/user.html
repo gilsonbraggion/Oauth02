@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>
+		Listagem dos dados do usuário retornados pelo
+		<th:block th:utext="${provedor}">
+		</th:block>
+	</h1>
+
+
+	<div th:if="${provedor == 'GitHub'}">
+		<h1>
+			Name:
+			<label th:utext="${name}"> </label>
+		</h1>
+		<h1>
+			Login:
+			<label th:utext="${login}"> </label>
+		</h1>
+		<h1>
+			Email:
+			<label th:utext="${email}"> </label>
+		</h1>
+		<h1>
+			Id:
+			<label th:utext="${id}"> </label>
+		</h1>
+		<h1>
+			Avatar Url:
+			<label th:utext="${avatar_url}"> </label>
+		</h1>
+		<h1>
+			Url:
+			<label th:utext="${url}"> </label>
+		</h1>
+		<h1>
+			Type:
+			<label th:utext="${type}"> </label>
+		</h1>
+		<h1>
+			Company:
+			<label th:utext="${company}"> </label>
+		</h1>
+		<h1>
+			Followers:
+			<label th:utext="${followers}"> </label>
+		</h1>
+	</div>
+
+	<div th:if="${provedor == 'Google'}">
+		<h1>
+			Name:
+			<label th:utext="${name}"> </label>
+		</h1>
+
+		<h1>
+			Given Name:
+			<label th:utext="${given_name}"> </label>
+		</h1>
+
+		<h1>
+			Family Name:
+			<label th:utext="${family_name}"> </label>
+		</h1>
+
+		<h1>
+			Email:
+			<label th:utext="${email}"> </label>
+		</h1>
+
+	</div>
+
+	<div>
+		Logout: <a th:href="@{/logout}">click here</a>
+	</div>
+
+
+</body>
+</html>
